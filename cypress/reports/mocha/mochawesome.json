@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-12-29T18:46:57.940Z",
+    "end": "2021-12-29T18:48:25.295Z",
+    "duration": 87355,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d87f9990-72ce-4f01-941b-174d215bccff",
+      "title": "",
+      "fullFile": "cypress/integration/first_spec.js",
+      "file": "cypress/integration/first_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "afbf2e72-ad84-4082-b0e4-d7bb30991d65",
+          "title": "First Pecode test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visit Pecode login page",
+              "fullTitle": "First Pecode test Visit Pecode login page",
+              "timedOut": null,
+              "duration": 48385,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\first_spec.js\\\\First Pecode test -- Visit Pecode login page (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "loginPage.searchNameInput().type(Cypress.env('name')).should('have.value', 'BugiVugi');\n;\nloginPage.searchPasswordInput().type(Cypress.env('password')).should('have.value', '112263');\nloginPage.searchForm().submit();\ncy.url().should('not.include', '/registerlogin');\n/* Create a test-case that will fail because of unsuccessful login. */",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php' to not include '/registerlogin'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php' to not include '/registerlogin'\n    at Context.eval (https://www.pecodesoftware.com/__cypress/tests?p=cypress\\integration\\first_spec.js:156:14)",
+                "diff": null
+              },
+              "uuid": "b4453e45-11f9-47ed-9179-2fa80137b800",
+              "parentUUID": "afbf2e72-ad84-4082-b0e4-d7bb30991d65",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that all the error messages appear.",
+              "fullTitle": "First Pecode test Verify that all the error messages appear.",
+              "timedOut": null,
+              "duration": 8351,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.searchForm().submit();\nloginPage.searchPasswordSpan().contains('Please enter your password.');\nloginPage.searchNameSpan().contains('Please enter username.');",
+              "err": {},
+              "uuid": "096609e8-7043-4a2a-accc-606767861e97",
+              "parentUUID": "afbf2e72-ad84-4082-b0e4-d7bb30991d65",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "expect - all the elements are present on the page",
+              "fullTitle": "First Pecode test expect - all the elements are present on the page",
+              "timedOut": null,
+              "duration": 12662,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "assert.exists(loginPage.searchNameInput(), 'Input is exist');\nassert.exists(loginPage.searchPasswordInput(), 'Input is exist');\nassert.exists(loginPage.searchButton(), 'Btn is exist');",
+              "err": {},
+              "uuid": "d79a51d8-eb50-419f-851a-3d1699554a9f",
+              "parentUUID": "afbf2e72-ad84-4082-b0e4-d7bb30991d65",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "096609e8-7043-4a2a-accc-606767861e97",
+            "d79a51d8-eb50-419f-851a-3d1699554a9f"
+          ],
+          "failures": [
+            "b4453e45-11f9-47ed-9179-2fa80137b800"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 69398,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

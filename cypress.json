@@ -1,0 +1,18 @@
+{
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+  },
+  "env": {
+    "src": "https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php",
+    "name": "BugiVugi",
+    "password": "112263"
+  }
+}
